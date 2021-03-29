@@ -11,14 +11,8 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
-    menuButton: {
-        margin: 10
-    },
     menuLeft: {
-        display: 'flex',
-        flexDirection: 'column',
-        flexGrow: 1,
-        textAlign: 'center'
+        flexGrow: 1
     },
     menuLeftContent: {
         width: '50%'
@@ -42,9 +36,6 @@ export const Header = () => {
                             <img className={classes.image} src={logo} alt="logon.png"/>
                         </div>
                     </div>
-                    <Button className={classes.menuButton} color="inherit">Trang chủ</Button>
-                    <Button className={classes.menuButton} color="inherit">Yêu cầu hồ sơ</Button>
-                    <Button className={classes.menuButton} color="inherit">Theo dõi hồ sơ</Button>
                     <Chip className={classes.avatar} label="Jay Le" variant="default" color="default"
                           icon={<FaceIcon/>}/>
                 </Toolbar>

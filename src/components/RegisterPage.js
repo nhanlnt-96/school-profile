@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export const RegisterPage = () => {
+const RegisterPage = () => {
     const classes = useStyles();
     return (
         <div className="register-page">
@@ -57,3 +57,5 @@ export const RegisterPage = () => {
         </div>
     );
 }
+
+export default RegisterPage;

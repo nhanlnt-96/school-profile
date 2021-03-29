@@ -1,7 +1,18 @@
 import React from 'react';
+import ProfileRequest from "./ProfileRequest";
+import ProfileStatus from "./ProfileStatus";
 
-export const HomePage = () => {
+const HomePage = () => {
     return (
-        <h1>day la trang chu</h1>
+        <div className="home-page">
+            <div className="profile__request">
+                <ProfileRequest/>
+            </div>
+            <div className="profile-status">
+                <ProfileStatus/>
+            </div>
+        </div>
     );
 }
+
+export default HomePage;

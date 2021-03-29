@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const LoginPage = () => {
+const LoginPage = () => {
   const classes = useStyles();
   return (
     <div className="login-page">
@@ -34,3 +34,5 @@ export const LoginPage = () => {
     </div>
   );
 }
+
+export default LoginPage;
