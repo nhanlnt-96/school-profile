@@ -2,7 +2,6 @@ import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
 import {Chip} from '@material-ui/core';
 import FaceIcon from '@material-ui/icons/Face';
 import logo from '../assets/logo.png'
