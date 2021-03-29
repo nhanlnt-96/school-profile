@@ -1,26 +1,25 @@
 import React from 'react';
-import { Header } from './containers/Header';
+import {Header} from './containers/Header';
 
 import './style/style.scss';
-import { LoginPage } from './components/LoginPage';
-import { RegisterPage } from './components/RegisterPage';
+import 'antd/dist/antd.css';
+import {HomePage} from "./components/HomePage";
 
 function App() {
-  return (
-    <div className="App">
-      {/*<div className="header">*/}
-      {/*  <Header/>*/}
-      {/*</div>*/}
-      {/*<div className="container">*/}
 
-      {/*</div>*/}
-      {/*<div className="footer">*/}
+    return (
+        <div className="App">
+            <div className="header">
+                <Header/>
+            </div>
+            <div className="container">
+                <HomePage/>
+            </div>
+            <div className="footer">
 
-      {/*</div>*/}
-      {/*<LoginPage/>*/}
-      <RegisterPage/>
-    </div>
-  );
+            </div>
+        </div>
+    );
 }
 
 export default App;
