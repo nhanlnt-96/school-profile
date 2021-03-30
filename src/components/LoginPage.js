@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logoHorizontal from '../assets/logo-horizontal.png';
 import { Button, TextField } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,8 +12,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const LoginPage = () => {
+const LoginPage = ({history}) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const classes = useStyles();
+
+  const onLoginBtnClick = (username, password) => {
+    if (username === 'nhan' && password === '123') {
+      console.log('success');
+      history.push('/');
+    }
+  };
+
+  const onRegisterBtnClick = () => {
+    history.push('/register');
+  }
+
   return (
     <div className="login-page">
       <div className="login__header">
@@ -22,13 +36,29 @@ const LoginPage = () => {
       <div className="login__form">
         <h1>ĐĂNG NHẬP</h1>
         <form className={classes.root} noValidate autoComplete="off">
-          <TextField required label="Tên đăng nhập" variant="outlined"/>
-          <TextField required label="Mật khẩu" variant="outlined" type="password"/>
-          <Button variant="contained" color="primary">ĐĂNG NHẬP</Button>
+          <TextField
+            required
+            label="Tên đăng nhập"
+            variant="outlined"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <TextField
+            required
+            label="Mật khẩu"
+            variant="outlined"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => onLoginBtnClick(username, password)}>ĐĂNG NHẬP</Button>
         </form>
         <div className="login__footer">
           <p>Bạn chưa có tài khoản ?</p>
-          <Button variant="outlined">ĐĂNG KÝ</Button>
+          <Button variant="outlined" onClick={onRegisterBtnClick}>ĐĂNG KÝ</Button>
         </div>
       </div>
     </div>
