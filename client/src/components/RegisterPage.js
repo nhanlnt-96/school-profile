@@ -33,15 +33,8 @@ const RegisterPage = ({history}) => {
   const dateTime = date + ' ' + time;
   const classes = useStyles();
 
-  const onRegisterBtnClick = async (adminId, dateTime, fullname, gender, username, password) => {
-    try {
-      return await createUser(adminId, dateTime, fullname, gender, username, password);
-    } catch (error) {
-      console.log(error)
-    } finally {
-      console.log('success')
-      history.push('/success');
-    }
+  const onRegisterBtnClick = () => {
+    console.log('hello');
   }
 
   return (

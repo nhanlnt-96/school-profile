@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import logoHorizontal from '../assets/logo-horizontal.png';
 import { Button, TextField } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { getUser } from '../Network';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,25 +18,9 @@ const LoginPage = ({history}) => {
   const [password, setPassword] = useState('');
   const [userDb, setUserDb] = useState([]);
   const classes = useStyles();
-  useEffect(async () => {
-    try {
-      const data = await getUser();
-      return setUserDb(data.data);
-
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
-
-  console.log(userDb);
 
   const onLoginBtnClick = (username, password) => {
-    userDb.map((val) => {
-      if (username === val.username && password === val.password) {
-        history.push('/');
-      }
-      return console.log('wrong user or pass');
-    })
+    console.log('hello');
   };
 
   const onRegisterBtnClick = () => {
