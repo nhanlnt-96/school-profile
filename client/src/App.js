@@ -1,12 +1,8 @@
 import React from 'react';
-import { Header } from './containers/Header';
-import HomePage from './components/HomePage';
+import { Header } from './components/Header';
+import RouterOutlet from './Routes/RouterOutlet';
 
 import './style/style.scss';
-import 'antd/dist/antd.css';
-import LoginPage from './components/LoginPage';
-import RegisterPage from './components/RegisterPage';
-import RouterOutlet from './Routes/RouterOutlet';
 
 function App() {
 

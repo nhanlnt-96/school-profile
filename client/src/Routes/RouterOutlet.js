@@ -1,9 +1,9 @@
 import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
-import HomePage from '../components/HomePage';
-import RegisterPage from '../components/RegisterPage';
-import LoginPage from '../components/LoginPage';
-import SuccessPage from '../components/SuccessPage';
-import NotFound from '../components/NotFound';
+import HomePage from '../containers/HomePage';
+import RegisterPage from '../containers/RegisterPage';
+import LoginPage from '../containers/LoginPage';
+import SuccessPage from '../containers/SuccessPage';
+import NotFound from '../containers/NotFound';
 
 const routes = [
     {

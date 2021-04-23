@@ -1,28 +1,25 @@
 module.exports = (sequelize, DataTypes) => {
-  const Users = sequelize.define('user', {
+  const Users = sequelize.define("users", {
     full_name: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
     },
     gender: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
     },
     username: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
-    role:{
+    role: {
       type: DataTypes.INTEGER,
-      allowNull: false
-    }
+      allowNull: false,
+    },
   });
-  Users.associate = (models) => {
-    Users.hasMany(models.school_profile, {as: 'school_profile_id'});
-  };
   return Users;
-}
+};
